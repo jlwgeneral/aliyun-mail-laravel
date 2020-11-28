@@ -1,0 +1,21 @@
+{
+    "name": "jlwgeneral/aliyun-mail-laravel",
+    "description": "use aliyun mail push api with laravel",
+    "type": "library",
+    "require": {
+        "php-curl-class/php-curl-class": "8.9.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jlwgeneral",
+            "email": "wjl931@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload":{
+        "psr-4":{
+            "JlwGeneral\\AliyunMailLaravel\\":"src/"
+        }
+    }
+}
