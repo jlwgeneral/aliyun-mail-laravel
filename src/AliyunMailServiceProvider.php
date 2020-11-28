@@ -34,7 +34,7 @@ class AliyunMailServiceProvider extends ServiceProvider
     public function boot()
     {
         if ($this->app->runningInConsole()) {
-            $this->publishes([__DIR__ . '/config/aliyun_mail.php' => config_path('aliyun_mail.php')]);
+            $this->publishes([__DIR__ . '/../config/aliyun_mail.php' => config_path('aliyun_mail.php')]);
         } else {
             $this->app->configure('aliyun_mail');
         }
