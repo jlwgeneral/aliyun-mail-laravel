@@ -15,7 +15,7 @@ class AliyunMailServiceProvider extends ServiceProvider
     {
         //$this->configPublish();
         $this->app->singleton('aliyun_mail', function ($app) {
-            $config = $app->make('config')->get('aliyun_mail', []);
+            $config = $app->make('config')->get('aliyun_mail', [ ]);
 
             return new AliyunMail($config);
         });
