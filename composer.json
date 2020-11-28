@@ -3,6 +3,7 @@
     "description": "use aliyun mail push api with laravel",
     "type": "library",
     "require": {
+        "laravel/framework": ">=5.5",
         "php-curl-class/php-curl-class": "8.9.*"
     },
     "license": "MIT",
@@ -16,6 +17,16 @@
     "autoload":{
         "psr-4":{
             "JlwGeneral\\AliyunMailLaravel\\":"src/"
+        }
+    },
+    "extra":{
+        "laravel": {
+            "providers": [
+                "JlwGeneral\\AliyunMailLaravel\\AliyunMailServiceProvider"
+            ],
+            "aliases": {
+                "AliyunMail": "JlwGeneral\\AliyunMailLaravel\\Facade\\AliyunMail"
+            }
         }
     }
 }
