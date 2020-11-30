@@ -3,7 +3,6 @@
 namespace JlwGeneral\AliyunMailLaravel;
 
 use Curl\Curl;
-use JlwGeneral\AliyunMailLaravel\Config;
 use JlwGeneral\AliyunMailLaravel\Contracts\AliyunMail\Factory;
 
 class AliyunMail implements Factory
