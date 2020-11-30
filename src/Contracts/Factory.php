@@ -1,6 +1,6 @@
 <?php
 
-namespace JlwGeneral\AliyunMailLaravel\Contracts;
+namespace JlwGeneral\AliyunMailLaravel\Contracts\AliyunMail;
 
 interface Factory
 {
