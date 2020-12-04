@@ -15,7 +15,8 @@ return [
     */
 
     'city' => 'hangzhou',
-    'type' => 'SingleSendMail',
+    'type' => 'SingleSendMail', // SingleSendMail | BatchSendMail | DescAccountSummary
+    'api_url' => 'https://dm.aliyuncs.com/?Action=',
 
     /*
     |--------------------------------------------------------------------------
@@ -74,11 +75,10 @@ return [
             //'Signature' => '',
         ],
 
-        'send' => [
+        'mandatory' => [
             'AccountName' => env('AccountName', ''), //发信地址
             'AddressType' => env('AccessKeySecret  ', 0), //0-随机账号 1-发信地址
             'ReplyToAddress' => env('ReplyToAddress  ', 0), //回信地址
-            'TemplateName' => ''
         ],
 
     ],
