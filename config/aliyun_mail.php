@@ -15,8 +15,12 @@ return [
     */
 
     'city' => 'hangzhou',
-    'type' => 'SingleSendMail', // SingleSendMail | BatchSendMail | DescAccountSummary
-    'api_url' => 'https://dm.aliyuncs.com/?Action=',
+    'type' => [
+        'SingleSendMail' => 'SingleSendMail',
+        'BatchSendMail' => 'BatchSendMail',
+        'DescAccountSummary' => 'DescAccountSummary',
+    ],
+    'api_url' => 'https://dm.aliyuncs.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +56,7 @@ return [
 
     'auth' => [
         'AccessKeyID' => env('AccessKeyID', ''),
-        'AccessKeySecret ' => env('AccessKeySecret', ''),
+        'AccessKeySecret' => env('AccessKeySecret', ''),
     ],
 
     /*
@@ -67,10 +71,10 @@ return [
             'Timestamp' => now()->toIso8601ZuluString(),
             'SignatureVersion' => '1.0',
             'SignatureNonce' => md5(uniqid(mt_rand(), true)),
-            'RegionId' => env('RegionId', ''),
+            'AccessKeyId' => env('AccessKeyID', ''),
             'SignatureMethod' => 'HMAC-SHA1',
 
-            //'AccessKeyId' => env('AccessKeyId', ''),
+            //'RegionId' => env('RegionId', ''),
             //'Version' => '2015-11-23',
             //'Signature' => '',
         ],
